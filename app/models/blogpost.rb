@@ -8,7 +8,9 @@
 #  published_date :datetime
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  user_id        :bigint
 #
 
 class Blogpost < ApplicationRecord
+  belongs_to :user
 end
