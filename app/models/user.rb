@@ -11,7 +11,9 @@
 #
 
 class User < ApplicationRecord
-  searchkick
+  include ElasticsearchIndexer
+
+  searchkick callbacks: false
 
   has_many :blogposts
 
