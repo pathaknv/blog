@@ -18,7 +18,13 @@ class User < ApplicationRecord
   def search_data
     {
       name: name,
-      email: email
+      email: email,
+      total_blogposts: blogposts.count,
+      last_published_blogpost_date: last_published_blogpost_date
     }
+  end
+
+  def last_published_blogpost_date
+    blogposts.order(published_date: :desc).first.try(:published_date)
   end
 end
