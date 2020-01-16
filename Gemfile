@@ -64,3 +64,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'faker'
 gem 'searchkick'
+
+#Refer this for following using rack gem https://github.com/rack/rack/pull/1428
+gem 'rack', github: 'rack/rack', ref: 'f690bb71425aa31d7b9b3113829af773950d8ab5'
+
+gem 'sidekiq'
